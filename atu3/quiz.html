@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Skin Care - Descubra seu Tipo de Pele</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>VITAGLOW.</h1>
+        </div>
+
+        <div class="icons">
+            <a href="#"><img src="img/lupa.png" alt="Search"></a>
+            <a href="#"><img src="img/carrinho.png" alt="User"></a>
+            <a href="#"><img src="img/coracao.png" alt="Cart"></a>
+        </div>
+
+        <div class="search-bar" id="searchBar">
+            <input type="text" placeholder="Pesquisar produtos...">
+            <br><br>
+            <button type="submit" class="pes">Buscar</button>
+
+        </div>
+
+    </header>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href = 'index.html'">Home</a></li>
+                <li><a href="#">Mais Vendidos</a></li>
+                <li><a href="#">Cuidados com a pele</a></li>
+                <li><a href="#">Presentes</a></li>
+                <li><a href="#">Tipos de pele</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h2 class="descubra">Descubra Seu Tipo de Pele</h2>
+    <main>
+        <section id="quiz-container">
+            <form id="skin-care-quiz">
+                <div class="question">
+                    <p>1. Como sua pele se sente ao longo do dia?</p>
+                    <label><input type="radio" name="q1" value="oleosa"> Oleosa</label>
+                    <label><input type="radio" name="q1" value="seca"> Seca</label>
+                    <label><input type="radio" name="q1" value="mista"> Mista</label>
+                    <label><input type="radio" name="q1" value="normal"> Normal</label>
+                </div>
+                <div class="question">
+                    <p>2. Como sua pele reage após lavar o rosto?</p>
+                    <label><input type="radio" name="q2" value="repuxada"> Repuxada</label>
+                    <label><input type="radio" name="q2" value="oleosa"> Mais oleosa</label>
+                    <label><input type="radio" name="q2" value="suave"> Suave e confortável</label>
+                    <label><input type="radio" name="q2" value="seca_zonas"> Seca em algumas áreas</label>
+                </div>
+                <div class="question">
+                    <p>3. Você costuma ter acne ou espinhas?</p>
+                    <label><input type="radio" name="q3" value="frequente"> Frequentemente</label>
+                    <label><input type="radio" name="q3" value="raro"> Raramente</label>
+                    <label><input type="radio" name="q3" value="ocasional"> Ocasionalmente</label>
+                    <label><input type="radio" name="q3" value="nunca"> Nunca</label>
+                </div>
+                <div class="question">
+                    <p>4. Sua pele apresenta áreas com brilho excessivo?</p>
+                    <label><input type="radio" name="q4" value="sim"> Sim, na zona T (testa, nariz e queixo)</label>
+                    <label><input type="radio" name="q4" value="toda"> Sim, em todo o rosto</label>
+                    <label><input type="radio" name="q4" value="nao"> Não</label>
+                    <label><input type="radio" name="q4" value="ocasional"> Ocasionalmente</label>
+                </div>
+                <div class="question">
+                    <p>5. Você sente sua pele sensível a produtos?</p>
+                    <label><input type="radio" name="q5" value="frequente"> Sim, frequentemente</label>
+                    <label><input type="radio" name="q5" value="raro"> Não, raramente</label>
+                    <label><input type="radio" name="q5" value="moderado"> Às vezes, dependendo do produto</label>
+                    <label><input type="radio" name="q5" value="nunca"> Nunca</label>
+                </div>
+
+                <button type="button" id="submit-quiz">Descobrir Tipo de Pele</button>
+
+            </form>
+
+            <div id="result-container" class="hidden">
+                <h2>Resultado</h2>
+                <p id="result-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h4 class="empre">Empresa</h4>
+            <ul>
+                <li><a href="#" onclick="location.href = 'page3.html'" class="sobre">Sobre nós</a></li>
+                <li><a href="#" class="sob">Junte-se a nós</a></li>
+            </ul>
+
+            <div class="nossos">
+                <h4>Nossos Compromissos</h4>
+                <ul>
+                    <li><a href="#">Não testado em animais</a></li>
+                    <li><a href="#" class="sus">Sustentabilidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="aten">
+                <h4>Atendimento ao Cliente</h4>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Acompanhar pedido</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="entrar">
+            <div>
+                <h4>Acompanhar Pedido</h4>
+                <h4>Entrar</h4>
+            </div>
+            <div class="cartao">
+                <h4>Formas de Pagamento</h4>
+                <img src="img/cartao.png" alt="" width="70">
+                <img src="img/maquina.png" alt="" width="70">
+                <img src="img/dinheiro.png" alt="" width="70">
+            </div>
+        </div>
+        <div class="icones-footer">
+            <div>
+                <img class="email" src="img/email.png" alt="">
+            </div>
+            <div>
+                <img class="ttk" src="img/ttk.png" alt="">
+            </div>
+            <div class="insta">
+                <img src="img/insta.png" alt="" width="55">
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.getElementById("submit-quiz").addEventListener("click", function () {
+            const answers = {
+                q1: document.querySelector('input[name="q1"]:checked'),
+                q2: document.querySelector('input[name="q2"]:checked'),
+                q3: document.querySelector('input[name="q3"]:checked'),
+                q4: document.querySelector('input[name="q4"]:checked'),
+                q5: document.querySelector('input[name="q5"]:checked'),
+            };
+
+            if (Object.values(answers).includes(null)) {
+                alert("Por favor, responda a todas as perguntas!");
+                return;
+            }
+
+            let result = "";
+            if (answers.q1.value === "oleosa" || answers.q4.value === "sim") {
+                result = "Sua pele é Oleosa.";
+            } else if (answers.q1.value === "seca" || answers.q2.value === "repuxada") {
+                result = "Sua pele é Seca.";
+            } else if (answers.q1.value === "mista") {
+                result = "Sua pele é Mista.";
+            } else {
+                result = "Sua pele é Normal.";
+            }
+
+            document.getElementById("result-text").textContent = result;
+            document.getElementById("result-container").classList.remove("hidden");
+        });
+
+        // Função para alternar a exibição da barra de pesquisa
+        document.querySelector('.icons img[alt="Search"]').addEventListener('click', function (event) {
+            event.preventDefault();
+            const searchBar = document.getElementById('searchBar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        });
+
+        // Função para ocultar a barra de pesquisa, resetar o campo e redirecionar para produtos.html
+        document.querySelector('#searchBar button').addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o envio do formulário real
+            const searchBar = document.getElementById('searchBar');
+            const searchInput = searchBar.querySelector('input');
+
+            // Aqui você pode obter o termo de pesquisa, caso queira usá-lo no redirecionamento
+            const query = searchInput.value;
+
+            // Oculta a barra de pesquisa e reseta o campo de entrada
+            searchBar.style.display = 'none';
+            searchInput.value = '';
+
+            // Redireciona para a página produtos.html (inclui o termo de pesquisa como parâmetro opcional)
+            window.location.href = `produtos.html?search=${encodeURIComponent(query)}`;
+        });
+
+    </script>
+</body>
+
+</html>

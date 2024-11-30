@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaglow - Loja de Cuidados com a Pele</title>
+    <link rel="stylesheet" href="produtos.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>VITAGLOW.</h1>
+        </div>
+
+        <div class="icones">
+            <a href="#"><img src="img/lupa.png" alt="Search" id="searchIcon"></a>
+            <a href="#"><img src="img/carrinho.png" alt="User"></a>
+            <a href="#"><img src="img/coracao.png" alt="Cart"></a>
+        </div>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-bar" id="searchBar" style="display: none;">
+            <input type="text" placeholder="Pesquisar produtos..." id="searchInput">
+            <br><br>
+            <button type="submit" class="pes">Buscar</button>
+        </div>
+
+    </header>
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href = 'index.html'">Home</a></li>
+                <li><a href="#">Mais Vendidos</a></li>
+                <li><a href="#">Cuidados com a pele</a></li>
+                <li><a href="#">Presentes</a></li>
+                <li><a href="#" onclick="location.href = 'quiz.html'">Tipos de pele</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <aside class="filtro">
+            <strong>
+                <h2>Produtos</h2>
+            </strong>
+            <fieldset>
+                <ul class="pro">
+                    <li><input type="radio" name="pro" value="S"> Sérum</li>
+                    <li><input type="radio" name="pro" value="F"> Sabonete Facial</li>
+                    <li><input type="radio" name="pro" value="C"> Creme Facial</li>
+                    <li><input type="radio" name="pro" value="E"> Esfoliante</li>
+                    <li><input type="radio" name="pro" value="P"> Protetor Labial</li>
+                    <li><input type="radio" name="pro" value="PS"> Protetor Solar</li>
+                </ul>
+            </fieldset>
+        </aside>
+
+        <div class="produ">
+            <div class="produto">
+                <a href="compra.html?id=5">
+                    <img src="img/sab.png" alt="Produto 1">
+                    <h3>Sabonete Acne Control</h3>
+                    <p>Uma limpeza profunda</p>
+                    <strong>
+                        <p>R$</p>
+                        <p>39,99</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="produto">
+                <a href="compra.html?id=6">
+                    <img src="img/neu.png" alt="Produto 2">
+                    <h3>Esfoliante Deep Clean</h3>
+                    <p>Possui uma fórmula suave</p>
+                    <strong>
+                        <p>R$ 34,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=7">
+                    <img src="img/cremefa.png" alt="Produto 3">
+                    <h3>Creme Facial 3 em 1</h3>
+                    <p>Hidratação intensa</p>
+                    <strong>
+                        <p>R$ 38,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=8">
+                    <img src="img/niveala.png" alt="Produto 4">
+                    <h3>Hidratante Labial Nivea</h3>
+                    <p>Hidratação prolongada</p>
+                    <strong>
+                        <p>R$ 19,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=9">
+                    <img src="img/mix.png" alt="Produto 5">
+                    <h3>Serúm Mix 02</h3>
+                    <p>Alta eficácia</p>
+                    <strong>
+                        <p>R$ 49,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=10">
+                    <img src="img/creamy.png" alt="Produto 6">
+                    <h3>Calming Cream Creamy</h3>
+                    <p>Hidratante ultraleve</p>
+                    <strong>
+                        <p>R$ 47,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=11">
+                    <img src="img/milk.png" alt="Produto 7">
+                    <h3>Protetor Solar Bioré</h3>
+                    <p>Oferece alta proteção</p>
+                    <strong>
+                        <p>R$ 53,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=12">
+                    <img src="img/ser.png" alt="Produto 8">
+                    <h3>Serúm Facial Antiacne</h3>
+                    <p>Uniformiza a pele</p>
+                    <strong>
+                        <p>R$ 48,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=13">
+                    <img src="img/creni.png" alt="Produto 9">
+                    <h3>Creme Facial Nivea</h3>
+                    <p>Hidratação por 30h</p>
+                    <strong>
+                        <p>R$ 29,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=14">
+                    <img src="img/protetor.jpg" alt="Produto 10">
+                    <h3>Protetor Solar Neutrogena</h3>
+                    <p>Textura leve</p>
+                    <strong>
+                        <p>R$ 58,99</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=15">
+                    <img src="img/bepantol.jpg" alt="Produto 11">
+                    <h3>Protetor Labial Bepantol</h3>
+                    <p>Hidratação Intensa</p>
+                    <strong>
+                        <p>R$ 35,99</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=16">
+                    <img src="img/actine_.jpg" alt="Produto 12">
+                    <h3>Sabonete Actine</h3>
+                    <p>Possui Vitamina C</p>
+                    <strong>
+                        <p>R$ 35,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=17">
+                    <img src="img/vichy.jpg" alt="Produto 14">
+                    <h3>Creme VICHY</h3>
+                    <p>Nutritivo Redensificador</p>
+                    <strong>
+                        <p>R$ 246,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=18">
+                    <img src="img/biore uv.png" alt="Produto 15">
+                    <h3>Protetor Solar Aqua Rich</h3>
+                    <p>Textura em Gel</p>
+                    <strong>
+                        <p>R$ 66,90</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="produto">
+                <a href="compra.html?id=19">
+                    <img src="img/c.png" alt="Produto 16">
+                    <h3>Protetor Labial Nivea</h3>
+                    <p>FPS 30</p>
+                    <strong>
+                        <p>R$ 25,99</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="produto">
+                <a href="compra.html?id=20">
+                    <img src="img/es.jpg" alt="Produto 16">
+                    <h3>ClearSkin Esfoliante</h3>
+                    <p>Remove as Impurezas da Pele</p>
+                    <strong>
+                        <p>R$ 37,00</p>
+                    </strong>
+                    <div class="product-icons">
+                        <a href="#"><img src="img/coracao.png" alt="Favoritar"></a>
+                        <a href="#"><img src="img/carrinho.png" alt="Adicionar ao Carrinho"></a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#" onclick="location.href = 'page3.html'">Sobre nós</a></li>
+                <li><a href="#">Junte-se a nós</a></li>
+            </ul>
+            <div class="nossos">
+                <h4>Nossos Compromissos</h4>
+                <ul>
+                    <li><a href="#">Não testado em animais</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="aten">
+                <h4>Atendimento ao Cliente</h4>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Acompanhar pedido</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="entrar">
+            <div>
+                <h4>Acompanhar Pedido</h4>
+                <h4>Entrar</h4>
+            </div>
+            <div class="cartao">
+                <h4>Formas de Pagamento</h4>
+                <img src="img/cartao.png" alt="" width="70">
+                <img src="img/maquina.png" alt="" width="70">
+                <img src="img/dinheiro.png" alt="" width="70">
+            </div>
+        </div>
+        <div class="icones-footer">
+            <div>
+                <img class="email" src="img/email.png" alt="">
+            </div>
+            <div>
+                <img class="ttk" src="img/ttk.png" alt="">
+            </div>
+            <div class="insta">
+                <img src="img/insta.png" alt="" width="55">
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Exibe ou oculta a barra de pesquisa
+        const searchIcon = document.getElementById('searchIcon');
+        const searchBar = document.getElementById('searchBar');
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.querySelector('.pes'); // Botão de busca
+
+        searchIcon.addEventListener('click', function (event) {
+            event.preventDefault();
+            searchBar.style.display = (searchBar.style.display === 'none' || searchBar.style.display === '')
+                ? 'block'
+                : 'none';
+        });
+
+        // Redireciona para a página com o termo de pesquisa
+        searchButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `produtos.html?search=${encodeURIComponent(query)}`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

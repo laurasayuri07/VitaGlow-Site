@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaglow - Loja de Cuidados com a Pele</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>VITAGLOW.</h1>
+        </div>
+
+
+        <div class="icones">
+            <a href="#" id="searchIcon"><img src="img/lupa.png" alt="Search"></a> 
+            <a href="#"><img src="img/carrinho.png" alt="User"></a>
+            <a href="#"><img src="img/coracao.png" alt="Cart"></a>
+        </div>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-bar" id="searchBar" style="display: none;">
+            <input type="text" placeholder="Pesquisar produtos..." id="searchInput">
+            <br><br>
+            <button type="submit" class="pes">Buscar</button>
+        </div>
+
+
+
+    </header>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href = 'index.html'">Home</a></li>
+                <li><a href="#">Mais Vendidos</a></li>
+                <li><a href="#">Cuidados com a pele</a></li>
+                <li><a href="#">Presentes</a></li>
+                <li><a href="#" onclick="location.href = 'quiz.html'">Tipos de pele</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="nos">
+        <strong>
+            <h1>Sobre Nós</h1>
+        </strong>
+    </div>
+    <div>
+        <fieldset>
+            <h1 class="nome">VITAGLOW.</h1>
+        </fieldset>
+    </div>
+    <div>
+        <fieldset class="dois">
+            <br><br><br>
+            <strong>
+                <p>Na Vitaglow, nossa missão é iluminar a sua pele com a combinação perfeita de ciência e natureza...
+                </p>
+                <p>Utilizamos ingredientes premium, cuidadosamente selecionados e formulados.</p>
+                <p>Acreditamos que a verdadeira beleza vem de dentro e reflete a saúde da nossa pele.
+                    <br> Junte-se a nós nessa jornada de brilho e bem-estar!
+                </p>
+            </strong>
+        </fieldset>
+    </div>
+    <div class="contato">
+        <form>
+            <div class="form-group">
+                <div class="input-container">
+                    <label for="email"><strong>Entre em Contato Conosco</strong></label>
+                    <br>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                </div>
+                <div class="input-container">
+                    <label for="senha"><strong>Reclame Aqui</strong></label>
+                    <br>
+                    <input type="senha" id="senha" placeholder="Reclame aqui" required>
+                    <input type="submit" style="display: none;">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#" onclick="location.href = 'page3.html'">Sobre nós</a></li>
+                <li><a href="#">Junte-se a nós</a></li>
+            </ul>
+            <div class="nossos">
+                <h4>Nossos Compromissos</h4>
+                <ul>
+                    <li><a href="#">Não testado em animais</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="aten">
+                <h4>Atendimento ao Cliente</h4>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Acompanhar pedido</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="entrar">
+            <div>
+                <h4>Acompanhar Pedido</h4>
+                <h4>Entrar</h4>
+            </div>
+            <div class="cartao">
+                <h4>Formas de Pagamento</h4>
+                <img src="img/cartao.png" alt="" width="70">
+                <img src="img/maquina.png" alt="" width="70">
+                <img src="img/dinheiro.png" alt="" width="70">
+            </div>
+        </div>
+        <div class="icones-footer">
+            <div>
+                <img class="email" src="img/email.png" alt="">
+            </div>
+            <div>
+                <img class="ttk" src="img/ttk.png" alt="">
+            </div>
+            <div class="insta">
+                <img src="img/insta.png" alt="" width="55">
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Exibe ou oculta a barra de pesquisa
+        const searchIcon = document.getElementById('searchIcon');
+        const searchBar = document.getElementById('searchBar');
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.querySelector('.pes'); // Botão de busca
+
+        searchIcon.addEventListener('click', function (event) {
+            event.preventDefault();
+            searchBar.style.display = (searchBar.style.display === 'none' || searchBar.style.display === '')
+                ? 'block'
+                : 'none';
+        });
+
+        // Redireciona para a página com o termo de pesquisa
+        searchButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `produtos.html?search=${encodeURIComponent(query)}`;
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

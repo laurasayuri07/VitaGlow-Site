@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="compras.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>VITAGLOW.</h1>
+        </div>
+
+
+        <div class="icons">
+            <a href="#"><img src="img/lupa.png" alt="Search"></a>
+            <a href="#"><img src="img/carrinho.png" alt="User"></a>
+            <a href="#"><img src="img/coracao.png" alt="Cart"></a>
+        </div>
+
+        <div class="search-bar" id="searchBar">
+            <input type="text" placeholder="Pesquisar produtos...">
+            <br><br>
+            <button type="submit" class="pes">Buscar</button>
+        </div>
+
+    </header>
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href = 'index.html'">Home</a></li>
+                <li><a href="#">Mais Vendidos</a></li>
+                <li><a href="#">Cuidados com a pele</a></li>
+                <li><a href="#">Presentes</a></li>
+                <li><a href="#" onclick="location.href = 'quiz.html'">Tipos de pele</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="deta">Detalhes do Produto</h1>
+    <nav>
+        <a href="index.html" class="voltar-loja">Voltar para a Loja</a>
+    </nav>
+
+    <section class="produto-detalhado">
+        <div id="produto">
+        </div>
+
+        <div class="acoes">
+            <button id="comprar">Comprar</button>
+            <button id="add-carrinho">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#" onclick="location.href = 'page3.html'">Sobre nós</a></li>
+                <li><a href="#">Junte-se a nós</a></li>
+            </ul>
+            <div class="nossos">
+                <h4>Nossos Compromissos</h4>
+                <ul>
+                    <li><a href="#">Não testado em animais</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="aten">
+                <h4>Atendimento ao Cliente</h4>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Acompanhar pedido</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="entrar">
+            <div>
+                <h4>Acompanhar Pedido</h4>
+                <h4>Entrar</h4>
+            </div>
+            <div class="cartao">
+                <h4>Formas de Pagamento</h4>
+                <img src="img/cartao.png" alt="" width="70">
+                <img src="img/maquina.png" alt="" width="70">
+                <img src="img/dinheiro.png" alt="" width="70">
+            </div>
+        </div>
+        <div class="icones-footer">
+            <div>
+                <img class="email" src="img/email.png" alt="">
+            </div>
+            <div>
+                <img class="ttk" src="img/ttk.png" alt="">
+            </div>
+            <div class="insta">
+                <img src="img/insta.png" alt="" width="55">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const produtos = [
+            {
+                id: 1,
+                nome: "Niacinamida",
+                imagem: "img/nia.png",
+                preco: "R$ 184,99",
+                descricao: "Sérum com niacinamida para reduzir a acne e melhorar a textura da pele."
+            },
+            {
+                id: 2,
+                nome: "Ácido Hialurônico",
+                imagem: "img/hia.png",
+                preco: "R$ 152,99",
+                descricao: "Sérum hidratante com ácido hialurônico para manter a pele suave e hidratada."
+            },
+            {
+                id: 3,
+                nome: "Protetor Solar Facial",
+                imagem: "img/protetor.png",
+                preco: "R$ 40,00",
+                descricao: "Protetor solar para o rosto com FPS 60."
+            },
+            {
+                id: 4,
+                nome: "Creme Facial CeraVe",
+                imagem: "img/creme.png",
+                preco: "R$ 90,00",
+                descricao: "Creme hidratante facial da CeraVe para pele seca."
+            }
+        ]
+
+
+        // Função para carregar o produto na página de compras
+        function carregarProduto() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const produtoId = urlParams.get("id");
+            const produto = produtos.find(p => p.id == produtoId);
+
+            if (produto) {
+                const produtoElement = document.getElementById("produto");
+                produtoElement.innerHTML = `
+        <img src="${produto.imagem}" alt="${produto.nome}">
+        <h2>${produto.nome}</h2>
+        <p><strong>Preço:</strong> ${produto.preco}</p>
+        <p><strong>Descrição:</strong> ${produto.descricao}</p>
+    `;
+
+                // Função para adicionar ao carrinho
+                document.getElementById("add-carrinho").onclick = () => {
+                    // Carregar o carrinho existente ou criar um novo
+                    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+                    // Verificar se o produto já está no carrinho
+                    const produtoExistente = carrinho.find(p => p.id === produto.id);
+
+                    if (produtoExistente) {
+                        produtoExistente.quantidade += 1;  // Incrementa a quantidade
+                    } else {
+                        produto.quantidade = 1;  // Adiciona a quantidade inicial como 1
+                        carrinho.push(produto);
+                    }
+
+                    // Salvar o carrinho no localStorage
+                    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+                    alert(`${produto.nome} foi adicionado ao carrinho.`);
+                };
+
+                // Função para comprar diretamente
+                document.getElementById("comprar").onclick = () => {
+                    window.location.href = "finalizar-compra.html"; // Redireciona para a página de finalizar compra
+                };
+            } else {
+                alert("Produto não encontrado.");
+            }
+        }
+
+        // Carregar o produto quando a página carregar
+        window.onload = carregarProduto;
+
+
+        // Função para alternar a exibição da barra de pesquisa
+        document.querySelector('.icons img[alt="Search"]').addEventListener('click', function (event) {
+            event.preventDefault();
+            const searchBar = document.getElementById('searchBar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        });
+
+        // Função para ocultar a barra de pesquisa, resetar o campo e redirecionar para produtos.html
+        document.querySelector('#searchBar button').addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o envio do formulário real
+            const searchBar = document.getElementById('searchBar');
+            const searchInput = searchBar.querySelector('input');
+
+            // Aqui você pode obter o termo de pesquisa, caso queira usá-lo no redirecionamento
+            const query = searchInput.value;
+
+            // Oculta a barra de pesquisa e reseta o campo de entrada
+            searchBar.style.display = 'none';
+            searchInput.value = '';
+
+            // Redireciona para a página produtos.html (inclui o termo de pesquisa como parâmetro opcional)
+            window.location.href = `produtos.html?search=${encodeURIComponent(query)}`;
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="compras.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>VITAGLOW.</h1>
+        </div>
+
+
+        <div class="icons">
+            <a href="#"><img src="img/lupa.png" alt="Search"></a>
+            <a href="#"><img src="img/carrinho.png" alt="User"></a>
+            <a href="#"><img src="img/coracao.png" alt="Cart"></a>
+        </div>
+
+        <div class="search-bar" id="searchBar">
+            <input type="text" placeholder="Pesquisar produtos...">
+            <br><br>
+            <button type="submit" class="pes">Buscar</button>
+        </div>
+
+    </header>
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="location.href = 'index.html'">Home</a></li>
+                <li><a href="#">Mais Vendidos</a></li>
+                <li><a href="#">Cuidados com a pele</a></li>
+                <li><a href="#">Presentes</a></li>
+                <li><a href="#" onclick="location.href = 'quiz.html'">Tipos de pele</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="deta">Detalhes do Produto</h1>
+    <nav>
+        <a href="produtos.html" class="voltar-loja">Voltar para a Loja</a>
+    </nav>
+
+    <section class="produto-detalhado">
+        <div id="produto">
+        </div>
+
+        <div class="acoes">
+            <button id="comprar">Comprar</button>
+            <button id="add-carrinho">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#" onclick="location.href = 'page3.html'">Sobre nós</a></li>
+                <li><a href="#">Junte-se a nós</a></li>
+            </ul>
+            <div class="nossos">
+                <h4>Nossos Compromissos</h4>
+                <ul>
+                    <li><a href="#">Não testado em animais</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="aten">
+                <h4>Atendimento ao Cliente</h4>
+                <ul>
+                    <li><a href="#">Perguntas Frequentes</a></li>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Acompanhar pedido</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="entrar">
+            <div>
+                <h4>Acompanhar Pedido</h4>
+                <h4>Entrar</h4>
+            </div>
+            <div class="cartao">
+                <h4>Formas de Pagamento</h4>
+                <img src="img/cartao.png" alt="" width="70">
+                <img src="img/maquina.png" alt="" width="70">
+                <img src="img/dinheiro.png" alt="" width="70">
+            </div>
+        </div>
+        <div class="icones-footer">
+            <div>
+                <img class="email" src="img/email.png" alt="">
+            </div>
+            <div>
+                <img class="ttk" src="img/ttk.png" alt="">
+            </div>
+            <div class="insta">
+                <img src="img/insta.png" alt="" width="55">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const produtos = [
+            {
+                id: 5,
+                nome: "Sabonete Acne Control",
+                imagem: "img/sab.png",
+                preco: "R$ 39,99",
+                descricao: "Controla a oleosidade, ajuda a desobstruir os poros e remove células mortas."
+            },
+            {
+                id: 6,
+                nome: "Esfoliante Deep Clean",
+                imagem: "img/neu.png",
+                preco: "R$ 34,90",
+                descricao: "Contém partículas que eliminam de forma suave as células mortas do rosto e conferem sensação refrescante e de pele energizada. "
+            },
+            {
+                id: 7,
+                nome: "Creme Facial 3 em 1",
+                imagem: "img/cremefa.png",
+                preco: "R$ 38,90",
+                descricao: "Hidratante facial mattificante. Neutrogena Face Care Intensive Matte 3 em 1 oferece hidratação prolongada por 24h e efeito primer instantâneo."
+            },
+            {
+                id: 8,
+                nome: "Hidratate Labial Nivea",
+                imagem: "img/niveala.png",
+                preco: "R$ 19,90",
+                descricao: "É ideal para usar no dia a dia pois, graças a sua formulação com óleos naturais, deixa os lábios hidratados e suavemente coloridos."
+            },
+            {
+                id: 9,
+                nome: "Serúm Mix 02",
+                imagem: "img/mix.png",
+                preco: "R$ 49,90",
+                descricao: "Clareia manchas, reduz bolsas e olheira, Uniformiza o tom e aumenta a luminosidade."
+            },
+            {
+                id: 10,
+                nome: "Calming Cream Creamy",
+                imagem: "img/creamy.png",
+                preco: "R$ 47,90",
+                descricao: "Proporciona alívio instantâneo para a pele sensível ou sensibilizada por fatores externos, como ácidos e demaquilantes."
+            },
+            {
+                id: 11,
+                nome: "Protetor Solar Bioré",
+                imagem: "img/milk.png",
+                preco: "R$ 53,90",
+                descricao: "Bioré UV Perfect Milk oferece alta proteção solar em textura macia e toque seco."
+            },
+            {
+                id: 12,
+                nome: "Serúm Facial Antiacne",
+                imagem: "img/ser.png",
+                preco: "R$ 48,90",
+                descricao: "Tratamento diário com dupla eficácia clínica comprovada, reduz espinhas e marcas."
+            },
+            {
+                id: 13,
+                nome: "Creme Facial Nivea",
+                imagem: "img/creni.png",
+                preco: "R$ 29,90",
+                descricao: "Sua fórmula à base de água, Karité e Vitaminas hidrata por 30h sem deixar a pele oleosa, além de ser um ótimo primer."
+            },
+            {
+                id: 14,
+                nome: "Protetor Solar Neutrogena",
+                imagem: "img/protetor.jpg",
+                preco: "R$ 58,99",
+                descricao: "Para Pele Oleosa Derm Care Sem Cor FPS 70."
+            },
+            {
+                id: 15,
+                nome: "Protetor Labial Bepantol",
+                imagem: "img/bepantol.jpg",
+                preco: "R$ 35,99",
+                descricao: "O Hidratante Labial Bepantol oferece hidratação intensa e prolongada com proteção solar FPS 50."
+            },
+            {
+                id: 16,
+                nome: "Sabonete Actine",
+                imagem: "img/actine_.jpg",
+                preco: "R$ 35,90",
+                descricao: "Gel de limpeza para pele oleosa e acneica. Actine Gel de Limpeza elimina a oleosidade com uniformidade e sem ressecar o rosto."
+            },
+            {
+                id: 17,
+                nome: "Creme VICHY",
+                imagem: "img/vichy.jpg",
+                preco: "R$ 249,90",
+                descricao: "Creme facial para peles maduras. Vichy Neovadiol auxilia na diminuição dos impactos causados pela menopausa na pele, melhorando a aparência de rugas e flacidez."
+            },
+            {
+                id: 18,
+                nome: "Protetor Solar Aqua Rich",
+                imagem: "img/biore uv.png",
+                preco: "R$ 66,90",
+                descricao: "Protetor solar facial e corporal. Bioré Aqua Rich Watery Essence FPS 50 possui textura ultraleve, oferecendo alta proteção UVA e UVB, sem deixar a pele pegajosa após o uso."
+            },
+            {
+                id: 19,
+                nome: "Protetor Labial Nivea",
+                imagem: "img/c.png",
+                preco: "R$ 25,99",
+                descricao: "Este item proporciona hidratação eficaz aos lábios, sem deixar uma sensação oleosa, sendo ideal como base para batons matte ou para proteção solar."
+            },
+            {
+                id: 20,
+                nome: "ClearSkin Esfoliane",
+                imagem: "img/es.jpg",
+                preco: "R$ 37,00",
+                descricao: "Clearskin Sabonete Facial Esfoliante elimina a sujeira dos poros obstruídos através de uma limpeza profunda da pele."
+            },
+
+
+
+        ]
+
+
+        // Função para carregar o produto na página de compras
+        function carregarProduto() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const produtoId = urlParams.get("id");
+            const produto = produtos.find(p => p.id == produtoId);
+
+            if (produto) {
+                const produtoElement = document.getElementById("produto");
+                produtoElement.innerHTML = `
+        <img src="${produto.imagem}" alt="${produto.nome}">
+        <h2>${produto.nome}</h2>
+        <p><strong>Preço:</strong> ${produto.preco}</p>
+        <p><strong>Descrição:</strong> ${produto.descricao}</p>
+    `;
+
+                // Função para adicionar ao carrinho
+                document.getElementById("add-carrinho").onclick = () => {
+                    // Carregar o carrinho existente ou criar um novo
+                    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+                    // Verificar se o produto já está no carrinho
+                    const produtoExistente = carrinho.find(p => p.id === produto.id);
+
+                    if (produtoExistente) {
+                        produtoExistente.quantidade += 1;  // Incrementa a quantidade
+                    } else {
+                        produto.quantidade = 1;  // Adiciona a quantidade inicial como 1
+                        carrinho.push(produto);
+                    }
+
+                    // Salvar o carrinho no localStorage
+                    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+                    alert(`${produto.nome} foi adicionado ao carrinho.`);
+                };
+
+                // Função para comprar diretamente
+                document.getElementById("comprar").onclick = () => {
+                    window.location.href = "finalizar-compra.html"; // Redireciona para a página de finalizar compra
+                };
+            } else {
+                alert("Produto não encontrado.");
+            }
+        }
+
+        // Carregar o produto quando a página carregar
+        window.onload = carregarProduto;
+
+
+        // Função para alternar a exibição da barra de pesquisa
+        document.querySelector('.icons img[alt="Search"]').addEventListener('click', function (event) {
+            event.preventDefault();
+            const searchBar = document.getElementById('searchBar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+            } else {
+                searchBar.style.display = 'none';
+            }
+        });
+
+        // Função para ocultar a barra de pesquisa, resetar o campo e redirecionar para produtos.html
+        document.querySelector('#searchBar button').addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o envio do formulário real
+            const searchBar = document.getElementById('searchBar');
+            const searchInput = searchBar.querySelector('input');
+
+            // Aqui você pode obter o termo de pesquisa, caso queira usá-lo no redirecionamento
+            const query = searchInput.value;
+
+            // Oculta a barra de pesquisa e reseta o campo de entrada
+            searchBar.style.display = 'none';
+            searchInput.value = '';
+
+            // Redireciona para a página produtos.html (inclui o termo de pesquisa como parâmetro opcional)
+            window.location.href = `produtos.html?search=${encodeURIComponent(query)}`;
+        });
+    </script>
+</body>
+
+</html>

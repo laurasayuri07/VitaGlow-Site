@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: rgba(255, 245, 245, 0);
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    margin-left: 200px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.icons img {
+    width: 20px;
+    margin-left: 20px;
+}
+
+.hero {
+    margin-top: 20px;
+}
+
+
+.hero-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    margin: 50px 20px;
+}
+
+
+.produ:hover {
+    transform: translateY(10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.produ img {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+.produ img:hover {
+    transform: scale(1.1);
+}
+
+.produ h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    padding: 11px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 7px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+}
+
+
+.hero img {
+    width: 100%;
+}
+
+/* botao pesquisa lupa*/
+.pes {
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    color: rgb(255, 255, 255);
+    height: 25px;
+    width: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 60px;
+}
+
+button:hover {
+    background-color: rgba(77, 77, 77, 0.692);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.icons {
+    background-color: white;
+    border-radius: 20px;
+    height: 25px;
+    width: 150px;
+}
+
+.icons img {
+    margin-top: 3px;
+}
+
+/* coisas do footer*/
+
+.email {
+    width: 55px;
+    margin-top: -80px;
+    margin-right: 20px;
+}
+
+.ttk {
+    width: 55px;
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+.insta {
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+
+.icones-footer {
+    display: flex;
+    margin-top: 40px;
+}
+
+
+.nossos {
+    margin-top: 50px;
+}
+
+.aten {
+    margin-left: 50px;
+
+}
+
+.cartao {
+    margin-top: 40px;
+}
+
+
+
+/* Barra de pesquisa oculta por padrão */
+.search-bar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 5px;
+}
+
+
+.logo:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1),
+        0 0 25px rgba(255, 255, 255, 0.8),
+        0 0 35px rgba(255, 255, 255, 0.6);
+}
+
+
+.produ {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produ:hover {
+    background-color: rgba(126, 124, 124, 0.575);
+    color: rgb(255, 255, 255);
+    transform: translateY(-10px);
+}
+
+
+.videos-section {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.vdP1 video {
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(48, 48, 48);
+}
+
+
+
+/* video */
+h3 {
+    text-align: center;
+    padding: 20px;
+    text-shadow: 0px 10px 30px rgb(75, 72, 72);
+    font-size: 23px;
+}
+
+
+/* imagens */
+h1,
+h5 {
+    align-self: flex-start;
+    text-align: center;
+}
+
+
+h5 {
+    margin-bottom: 70px;
+    margin-top: 10px;
+    font-size: 18px;
+
+}
+
+.preo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.preo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+}
+
+
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.image:hover {
+    animation: pulse 0.9s infinite;
+}
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.seta {
+    width: 25px;
+    height: auto;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}

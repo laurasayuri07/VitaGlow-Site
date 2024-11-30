@@ -1,0 +1,286 @@
+.icons img {
+    width: 20px;
+    margin-left: 20px;
+}
+
+
+.pes {
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    color: rgb(255, 255, 255);
+    height: 25px;
+    width: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 60px;
+    font-size: 12px;
+}
+
+button:hover {
+    background-color: rgba(63, 63, 63, 0.692);
+    transform: scale(1.1);
+}
+
+.icons {
+    background-color: white;
+    border-radius: 20px;
+    height: 25px;
+    width: 150px;
+}
+
+.icons img {
+    margin-top: 3px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: rgba(255, 245, 245, 0);
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    margin-left: 200px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+nav ul li a,
+nav a {
+    text-decoration: none !important;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+}
+
+
+
+
+nav ul li a:hover {
+    color: #000;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    padding: 11px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 7px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+}
+
+
+
+
+
+
+/* coisas do footer*/
+
+.email {
+    width: 55px;
+    margin-top: -80px;
+    margin-right: 20px;
+}
+
+.ttk {
+    width: 55px;
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+.insta {
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+
+.icones-footer {
+    display: flex;
+    margin-top: 40px;
+}
+
+
+.nossos {
+    margin-top: 50px;
+}
+
+.aten {
+    margin-left: 50px;
+
+}
+
+.cartao {
+    margin-top: 40px;
+}
+
+
+
+/* Barra de pesquisa */
+.search-bar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 5px;
+}
+
+
+.logo:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1),
+        0 0 25px rgba(255, 255, 255, 0.8),
+        0 0 35px rgba(255, 255, 255, 0.6);
+}
+
+.fi {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+
+
+#itens-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.produto-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.produto-carrinho img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.acao-carrinho {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+
+#confirmar-compra {
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    color: rgb(255, 255, 255);
+    height: 45px;
+    width: 180px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+p {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+fieldset {
+    width: 80%;
+    max-width: 1500px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(1, 1, 1, 0.6);
+    margin-top: 20px;
+}
